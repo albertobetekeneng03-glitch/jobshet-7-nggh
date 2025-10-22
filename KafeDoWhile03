@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class KafeDoWhile03 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        String namaPelanggan;
+        do {
+            System.out.print("Masukkan nama pelanggan (ketik 'batal' untuk keluar): ");
+            namaPelanggan = sc.nextLine();
+            if (namaPelanggan.equalsIgnoreCase("batal")) {
+                System.out.print("Transaksi dibatalkan.");
+                break;
+            }
+            System.out.print("Jumlah kopi: ");
+            int kopi = sc.nextInt();
+            System.out.print("Jumlah teh: ");
+            int teh = sc.nextInt();
+            System.out.print("Jumlah roti: "); 
+            int Roti = sc.nextInt();
+            int hargaKopi = 15000;
+            int hargaTeh = 10000;
+            int hargaRoti = 12000;
+            int totalHarga = (kopi * hargaKopi) + (teh * hargaTeh) + (Roti * hargaRoti);
+            System.out.print("Total yang harus dibayar : Rp " + totalHarga);
+            sc.nextLine(); 
+        } while (true);
+
+        System.out.println("Semua transaksi selesai.");
+    
+}}
